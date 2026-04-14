@@ -1,0 +1,91 @@
+
+/******************************************************************************
+** CSC 1203 Data Structures and Algorithms
+** DAT038, TDA417  Datastrukturer och algoritmer, LP2 2020
+** Lab 2: Autocomplete
+*******************************************************************************/
+
+ Group I
+-[Natukunda Mary Ritah 2024/BSE/147/PS ] 
+-[Namanya Spencar 2024/BSE/140/PS] 
+-[Mwima Edrine 2024/BSE/130/PS] 
+-[Nsubuga Arafat 2024/BSE/154/PS ] 
+-[Ngabirano Haniel 2024/BSE/149/PS ] 
+
+
+/******************************************************************************
+** 1. Describe how your firstIndexOf() method in RangeBinarySearch.java
+**    finds the first index of a key that equals the search key.
+******************************************************************************/
+
+[The firstIndexOf() method uses a modified binary search algorithm to find the first occurrence of a key in a sorted array. 
+It maintains a result variable initialized to -1 and performs standard binary search with a key modification: when an equal element is found (comparator.compare(terms[mid], key) == 0), instead of returning immediately, 
+it stores the current index in result and continues searching in the left half of the array by setting right = mid - 1. This ensures that if there are multiple matching elements, the search continues leftward until finding the first occurrence. 
+The method returns the stored result, which will be the leftmost (first) index of all matching elements, or -1 if no match is found. ]
+
+
+/******************************************************************************
+** 2. What is the worst case time complexity in the number of compares
+**    that each of the operations in the Autocomplete data type make,
+**    as a function of the number of terms n and the number of matching terms m?
+******************************************************************************/
+
+sortDictionary():  [O(N log N)]
+
+[This method uses Arrays.sort() with a custom comparator, which implements an efficient sorting algorithm (typically merge sort) that guarantees O(N log N) comparisons in the worst case.]
+
+allMatches():  [O(log N + M log M)a\]
+
+[This method first calls firstIndexOf() and lastIndexOf(), each taking O(log N) time. Then it copies M matching terms (taking O(M) time), and finally sorts them using Arrays.sort(), which takes O(M log M) comparisons. 
+The total is O(log N) + O(log N) + O(M) + O(M log M) = O(log N + M log M), since the M log M term dominates when M is significant.]
+
+numberOfMatches():  [O(log N)]
+
+[This method calls firstIndexOf() and lastIndexOf(), each taking O(log N) time, then performs a simple subtraction. The total is O(log N) + O(log N) = O(log N). 
+The complexity does not depend on M, only on finding the boundaries of the matching range.]
+
+/******************************************************************************
+** Appendix: General information
+**
+** A. Approximately how many hours did you spend on the assignment?
+******************************************************************************/
+
+[Ngabirano Haniel 2024/BSE/149/PS] :  [10 hours]
+[Nsubuga Arafat 2024/BSE/154/PS ]  :  [10 hours]
+[Mwima Edrine 2024/BSE/130/PS]     :  [10 hours]
+[Natukunda Mary Ritah 2024/BSE/147/PS ] :  [10 hours]
+[Namanya Spencar 2024/BSE/140/PS]  :  [10 hours]
+
+
+/******************************************************************************
+** B. Are there any known bugs / limitations?
+******************************************************************************/
+
+[No]
+
+
+/******************************************************************************
+** C. Did you collaborate with any other students on this lab?
+**    If so, please write in what way you collaborated and with whom.
+**    Also include any resources (including the web) that you may
+**    may have used in creating your design.
+******************************************************************************/
+
+[https://github.com/morkev/autocomplete-binary-search/tree/main]
+
+
+/******************************************************************************
+** D. Describe any serious problems you encountered.                    
+******************************************************************************/
+
+[We did not encounter any serious problems]
+
+
+/******************************************************************************
+** E. List any other comments here.
+**    Feel free to provide any feedback on how much you learned 
+**    from doing the assignment, and whether you enjoyed it.                                             
+******************************************************************************/
+
+[We enjoyed learning from this assignment a lot]
+
