@@ -3,16 +3,9 @@
 
 In this lab your task is to implement autocomplete for a given set of terms, where a term consists of a string and an associated nonnegative weight. That is, given a prefix, find all queries that start with the given prefix, in descending order of weight.
 
-## About the labs
-
-- Labs must be done in groups. If you absolutely cannot work together with your previous lab partners, contact David Sabiiti Bamutura.
-- Each lab has two deadlines. By the first deadline you must submit at least a partial attempt at solving the lab. The lab will be marked and you will get feedback. By the second deadline, you must submit a complete and correct solution. If you are unsure if you have solved the lab correctly, please ask at a lab session!
-- The lab is part of the examination of the course. Therefore, you must not copy code from or show code to other groups. You are welcome to discuss ideas with one another, but anything you submit must be **the work of you and your lab partners**.
-- Please read [the general instructions on how to run the labs](https://classroom.google.com/c/NzQ3MTQyNjU3NjQ3/p/NzUwMDYyODg1NTU3/details).
-
 ## Getting started
 
-Start by downloading and unzipping **[Lab2.zip](https://lms.must.ac.ug/claroline/document/document.php?cmd=exChDir&file=L0xhYnM%3D&cidReset=true&cidReq=CSCSWE12023)**. It contains the following classes:
+ the lab contains the following classes:
 
 - **Term.java**: autocompletion terms
 - **RangeBinarySearch.java**: two different binary search algorithms
@@ -296,6 +289,3 @@ If you would like an extra challenge, here are some suggestions for things you c
       - delete one character from the prefix and lookup in (1) the original dictionary, and (2) in the 1-deleted terms
   - You can do the same for 2-deleted terms, and 3-deleted terms, but notice that the number of terms will explode.
 
-## Acknowledgements
-
-This assignment was conceived by Matthew Drabick and Kevin Wayne (©2014), with some changes to fit TDA417+DAT038 at Chalmers Uiversity  of Technology. We have not foreseen any changes or adaptations required for SWE 1202 at Mbarara UNiversity of Technology because managing several locals and characters will be a part of any programmer out there in the real world.
